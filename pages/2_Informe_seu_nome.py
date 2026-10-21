@@ -7,11 +7,15 @@ st.write("Esta é a segunda subpágina.")
 
 nome = st.text_input("Digite seu nome:")
 
+idade = st.text_input("Digite sua idade:")
+
 # se clicar no botão "Enviar"
 if st.button("Enviar"):
     # se foi preenchido o nome
     if nome:
         st.success(f"Olá, {nome}! Seja bem-vindo.")
+        dados['Nome'].append(nome)
+        dados['Idade'].append(idade)
     else:
         st.warning("Por favor, digite seu nome.")
 
